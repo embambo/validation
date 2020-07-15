@@ -24,6 +24,7 @@ CFILES += operations.c
 CFILES += operations1.c
 CFILES += operations2.c 
 CFILES += parse_args.c
+CFILES += parse_helper.c
 OFILES = $(CFILES:.c=.o)
 
 all: $(NAME)

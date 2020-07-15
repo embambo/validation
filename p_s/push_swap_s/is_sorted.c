@@ -6,7 +6,7 @@
 /*   By: embambo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/16 13:07:02 by embambo           #+#    #+#             */
-/*   Updated: 2020/06/15 12:14:30 by embambo          ###   ########.fr       */
+/*   Updated: 2020/07/15 13:04:05 by embambo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,17 @@ void		free_array(t_array *array)
 	free(array);
 	array = NULL;
 }
+
+void	delete_stacks(t_array **stacks)
+{
+	if(*stacks)
+	{
+		if((*stacks)->array_a)
+			free((*stacks)->array_a);
+		if((*stacks)->array_b)
+			free((*stacks)->array_b);
+		free(*stacks);
+		*stacks = NULL;
+	}
+}
+

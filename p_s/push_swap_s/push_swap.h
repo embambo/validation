@@ -6,7 +6,7 @@
 /*   By: embambo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/22 13:25:57 by embambo           #+#    #+#             */
-/*   Updated: 2020/06/15 12:23:59 by embambo          ###   ########.fr       */
+/*   Updated: 2020/07/15 14:05:47 by embambo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,10 +65,14 @@ void			check_av(t_array *array, char **argv, int argc);
 void			sort(t_array *array);
 void			indexes_for_500(t_array *array, int *d);
 void			portions_500(t_array *array);
+void			check_argv(t_array *stacks, char **argv, int argc);
+void			delete_stacks(t_array **stacks);
 
 int				max_elem(int *array, int len);
 int				is_sorted(int *array, int len);
 int				get_next_line(const int fd, char **line);
+int				check_if_dup(int argc, char **argv);
+long long 		ft_ato_longlong(char *str);
 
 void			ft_sa(t_array *array);
 void			ft_sb(t_array *array);
